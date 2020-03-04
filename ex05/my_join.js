@@ -1,5 +1,6 @@
+'use strict'
 function my_join(string, charset){
-    return string.map(x => x+=charset.replace("$\","$\\")).join('')
+    return [string.join(charset)]
 }
 
-console.log(my_join(["abc", "def", "gh"], "\n"));
+console.log(my_join(["abc", "def", "gh","!"], ""));
